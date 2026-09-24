@@ -24,7 +24,7 @@ src/
         >  FormCampo.jsx
         /organism/
         >  FormLogin.jsx
-        >/templates/
+        /templates/
         >  ...
     /pages/
         InicioSesion.jsx
