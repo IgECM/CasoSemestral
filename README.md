@@ -17,7 +17,7 @@ El proyecto esta estructurado de la siguiente forma:
 src/
     /components/
         /atoms/
-        > Boton.jsx
+        >  Boton.jsx
         >  Input.jsx
         >  Label.jsx
         /molecules/
@@ -27,7 +27,7 @@ src/
         /templates/
         >  ...
     /pages/
-        > InicioSesion.jsx
+        InicioSesion.jsx
 ```
 Para este trabajo, se esta usando React y Bootstrap.
 Para que este se ejecute, se tiene que correr:
