@@ -3,7 +3,7 @@ function Input(props){
         <input 
             id={props.id}
             type={props.type}
-            className="form-input"
+            className="form-control border border-black"
         />
     )
 }

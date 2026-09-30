@@ -1,6 +1,6 @@
 function Label(props){
     return (
-        <label for={props.for} className="form-label">
+        <label htmlFor={props.for} className="form-label fw-semibold">
             {props.text}
         </label>
     )
