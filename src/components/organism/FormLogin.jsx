@@ -3,9 +3,9 @@ import FormCampo from "../molecules/FormCampo";
 
 function FormLogin() {
     return (
-      <form className="FormLogin ">
+      <form className="FormLogin p-5 border border-black">
 
-        <h2 className="mb-3 mt-3">Iniciar Sesión</h2>
+        <h2 className="mb-5 mt-3 fs-2">Iniciar Sesión</h2>
 
         <FormCampo 
           id="email"
