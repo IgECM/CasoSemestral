@@ -4,7 +4,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import InicioSesion from "./pages/InicioSesion"
 import './App.css'
-import FormLogin from "./components/organism/FormLogin";
+
 
 function App() {
   return <InicioSesion/>
