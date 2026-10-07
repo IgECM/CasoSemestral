@@ -1,4 +1,4 @@
-import { etiquetaEstadoCita } from './atomos';
+import { etiquetaEstadoCita } from './atoms';
 
 function EtiquetaEstadoCita(props) {
     const etiqueta = useAtomValue(etiquetaEstadoCita);
