@@ -182,3 +182,11 @@
     border-right-color: var(--border);
   }
 }
+
+.login-container {
+  background-color: #F0F0F0;
+}
+
+.login-columna {
+  max-width: 400px;
+}
