@@ -4,7 +4,7 @@ import Input from "../atoms/Input";
 function FormCampo(props) {
   return (
       <div className="mb-5 text-start">
-        <Label htmlFor={props.id} text={props.labelText} />
+        <Label htmlFor={props.id} text={props.labelText} varianteLabel={props.varianteLabel}/>
         <Input id={props.id} type={props.type} varianteInput={props.varianteInput}/>
       </div>
   );

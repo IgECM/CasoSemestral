@@ -12,6 +12,7 @@ function FormLogin() {
           type="email"
           labelText="Correo Electronico"
           varianteInput="form-control border border-black"
+          varianteLabel="form-control border-0"
         />
 
         <FormCampo 
@@ -19,6 +20,7 @@ function FormLogin() {
           type="password"
           labelText="Contraseña"
           varianteInput="form-control border border-black"
+          varianteLabel="from-control border-0"
         />
 
         <Boton texto="Iniciar Sesión" />
