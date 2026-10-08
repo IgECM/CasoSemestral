@@ -18,20 +18,27 @@ src/
     /components/
         /atoms/
         >  Boton.jsx
+        >  EtiquetaEspecie.jsx
+        >  EtiquetaEstadoCita.jsx
         >  Input.jsx
         >  Label.jsx
+        >  Selector.jsx
         /molecules/
         >  FormCampo.jsx
         /organism/
         >  FormLogin.jsx
+        >  Navbar.jsx
         /templates/
         >  ...
     /pages/
         InicioSesion.jsx
+        Servicios.jsx
 ```
 Para este trabajo, se esta usando React y Bootstrap.
 Para que este se ejecute, se tiene que correr:
 ```text
+npm install
+
 npm run dev
 ```
 Google Drive: https://drive.google.com/drive/folders/14x75GfhqNUxgTjm7UDmeOI_G1RfBf2mU?usp=sharing
