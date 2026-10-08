@@ -6,8 +6,23 @@ import InicioSesion from "./pages/InicioSesion"
 import './App.css'
 
 
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Categorias from "./pages/Categorias";
+
+
 function App() {
-  return <InicioSesion/>
+  return (
+    <BrowserRouter>
+      <Routes>
+
+        <Route path="/" element={<InicioSesion />} />
+
+        <Route path="/categorias" element={<Categorias />} />
+
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
