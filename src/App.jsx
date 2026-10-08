@@ -9,6 +9,7 @@ import './App.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Categorias from "./pages/Categorias";
+import NoEncontrada from './pages/NoEncontrada'
 
 
 function App() {
@@ -19,6 +20,8 @@ function App() {
         <Route path="/" element={<InicioSesion />} />
 
         <Route path="/categorias" element={<Categorias />} />
+
+        <Route path="*" element={<NoEncontrada />} />
 
       </Routes>
     </BrowserRouter>
