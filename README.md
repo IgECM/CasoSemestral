@@ -4,7 +4,7 @@ Ignacio Cardenas | ig.cardenasm@duocuc.cl
 
 Vicente Araya | vic.arayas@duocuc.cl
 
-Tomas Gaete | toma.gaete@duocuc.cl
+Tomas Gaete (Cuentas utilizadas: tomasjdjfjf, aaassa-3, aaassa-5)| toma.gaete@duocuc.cl
 
 
 Se esta desarrollando el caso de la Veterinaria San Marcos.
