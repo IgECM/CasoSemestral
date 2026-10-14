@@ -1,0 +1,29 @@
+import Label from "../atom/Label";
+import Input from "../atom/Input";
+import Icono from "../atom/Icono";
+
+function CampoFormulario(props) {
+  return (
+    <div className="campo-formulario">
+      <Label texto={props.label} />
+
+      <div className="campo-formulario-input">
+        {props.icono && (
+          <Icono
+            tipo={props.icono}
+            tamano={20}
+          />
+        )}
+
+        <Input
+          type={props.type || "text"}
+          placeholder={props.placeholder || ""}
+          value={props.value}
+          onChange={props.onChange}
+        />
+      </div>
+    </div>
+  );
+}
+
+export default CampoFormulario;
