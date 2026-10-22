@@ -1,28 +1,27 @@
 import { etiquetaEspecie } from './atoms';
 
 function EtiquetaEspecie(props) {
-    const etiqueta = useAtomValue(etiquetaEspecie);
+    const especie = props.especie || "Otros";
     let color = "text-bg-secondary";
 
-    if (etiqueta === "Perro") {
+    if (especie === "Perro" || especie === "Gato") {
         color = "text-bg-primary";
     } 
-    else if (etiqueta === "Gato") {
-        color = "text-bg-primary";
-    } 
-    else if (etiqueta === "Reptiles") {
+    else if (especie === "Reptiles") {
         color = "text-bg-success";
     }
-    else if (etiqueta === "Aves") {
+    else if (especie === "Aves") {
         color = "text-bg-secondary";
     }
-    else if (etiqueta === "Otros") {
-        color = "text-bg-light";
+    else if (especie === "Otros") {
+        color = "text-bg-light text-dark";
     }
 
     return (
-        <div className={"badge " + color}>
-            {etiqueta}
+        <div className={`badge ${color}`}>
+            {especie}
         </div>
     );
 }
+
+export default EtiquetaEspecie;

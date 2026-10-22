@@ -1,43 +1,46 @@
-import Label from "../atomos/Label";
-import Input from "../atomos/Input";
-import EtiquetaEstadoCita from "../atomos/EtiquetaEstadoCita";
-import Boton from "../atomos/Boton";
+import Input from "../atoms/Input";
+
+import Label from "../atoms/Label";
+import EtiquetaEstadoCita from "../atoms/EtiquetaEstadoCita";
+import Boton from "../atoms/Boton";
 
 function FilaCita(props) {
     return (
-        <div className="row align-items-center border-bottom py-2">
+        <section className="row align-items-center border-bottom py-2">
 
-            <div className="col">
+            <section className="col">
                 <Label text={props.fecha} />
-            </div>
+            </section>
 
-            <div className="col">
+            <section className="col">
                 <Label text={props.hora} />
-            </div>
+            </section>
 
-            <div className="col">
+            <section className="col">
                 <Label text={props.mascota} />
-            </div>
+            </section>
 
-            <div className="col">
+            <section className="col">
                 <Label text={props.veterinario} />
-            </div>
+            </section>
 
-            <div className="col">
-                <EtiquetaEstadoCita />
-            </div>
+            <section className="col">
+                <EtiquetaEstadoCita estado={props.estado} />
+            </section>
 
-            <div className="col">
+            <section className="col">
                 <Boton
                     texto="Ver"
                     variante="primary"
                     onClick={props.onVer}
                 />
-            </div>
+            </section>
 
-        </div>
+        </section>
     );
 }
 
 export default FilaCita;
+
+
 //

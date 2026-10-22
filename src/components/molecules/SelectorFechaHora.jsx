@@ -1,4 +1,4 @@
-import Selector from "src/components/atoms/Selector.jsx";
+import Selector from "../atoms/Selector.jsx";
 
 function SelectorFechaHora(props) {
     return (

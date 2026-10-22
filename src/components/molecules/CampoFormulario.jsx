@@ -1,6 +1,6 @@
-import Label from "../atom/Label";
-import Input from "../atom/Input";
-import Icono from "../atom/Icono";
+import Label from "../atoms/Label";
+import Input from "../atoms/Input";
+import Icono from "../atoms/Icono";
 
 function CampoFormulario(props) {
   return (

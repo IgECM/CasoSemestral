@@ -11,4 +11,4 @@ function Selector (props)  {
     )
 }
 
-export default Selector
+export default Selector;

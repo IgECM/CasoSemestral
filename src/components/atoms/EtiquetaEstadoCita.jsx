@@ -1,22 +1,24 @@
 import { etiquetaEstadoCita } from './atoms';
 
 function EtiquetaEstadoCita(props) {
-    const etiqueta = useAtomValue(etiquetaEstadoCita);
+    const estado = props.estado || "Pendiente"; 
     let color = "text-bg-secondary";
 
-    if (etiqueta === "Pendiente") {
+    if (estado === "Pendiente") {
         color = "text-bg-warning";
     } 
-    else if (etiqueta === "Confirmada") {
+    else if (estado === "Confirmada") {
         color = "text-bg-success";
     } 
-    else if (etiqueta === "Cancelada") {
+    else if (estado === "Cancelada") {
         color = "text-bg-danger";
     }
 
     return (
-        <div className={"badge " + color}>
-            {etiqueta}
+        <div className={`badge ${color}`}>
+            {estado}
         </div>
     );
 }
+
+export default EtiquetaEstadoCita;
