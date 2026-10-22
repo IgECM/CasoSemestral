@@ -3,9 +3,10 @@ import Input from "../atoms/Input";
 
 function FormCampo(props) {
   return (
-      <div className="mb-5 text-start">
+      <div className="mb-3 text-start">
         <Label htmlFor={props.id} text={props.labelText} varianteLabel={props.varianteLabel}/>
-        <Input id={props.id} type={props.type} varianteInput={props.varianteInput}/>
+        <Input id={props.id} type={props.type} varianteInput={props.varianteInput}
+          value={props.value} onChange={props.onChange}/>
       </div>
   );
 }

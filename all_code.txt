@@ -1,0 +1,722 @@
+=== src/components/molecules/CampoFormulario.jsx ===
+import Label from "../atoms/Label";
+import Input from "../atoms/Input";
+import Icono from "../atoms/Icono";
+
+function CampoFormulario(props) {
+  return (
+    <div className="campo-formulario">
+      <Label texto={props.label} />
+
+      <div className="campo-formulario-input">
+        {props.icono && (
+          <Icono
+            tipo={props.icono}
+            tamano={20}
+          />
+        )}
+
+        <Input
+          type={props.type || "text"}
+          placeholder={props.placeholder || ""}
+          value={props.value}
+          onChange={props.onChange}
+        />
+      </div>
+    </div>
+  );
+}
+
+export default CampoFormulario;
+
+=== src/components/molecules/FilaCita.jsx ===
+import Input from "../atoms/Input";
+
+import Label from "../atoms/Label";
+import EtiquetaEstadoCita from "../atoms/EtiquetaEstadoCita";
+import Boton from "../atoms/Boton";
+
+function FilaCita(props) {
+    return (
+        <section className="row align-items-center border-bottom py-2">
+
+            <section className="col">
+                <Label text={props.fecha} />
+            </section>
+
+            <section className="col">
+                <Label text={props.hora} />
+            </section>
+
+            <section className="col">
+                <Label text={props.mascota} />
+            </section>
+
+            <section className="col">
+                <Label text={props.veterinario} />
+            </section>
+
+            <section className="col">
+                <EtiquetaEstadoCita estado={props.estado} />
+            </section>
+
+            <section className="col">
+                <Boton
+                    texto="Ver"
+                    variante="primary"
+                    onClick={props.onVer}
+                />
+            </section>
+
+        </section>
+    );
+}
+
+export default FilaCita;
+
+
+//
+=== src/components/molecules/FormCampo.jsx ===
+import Label from "../atoms/Label";
+import Input from "../atoms/Input";
+
+function FormCampo(props) {
+  return (
+      <div className="mb-5 text-start">
+        <Label htmlFor={props.id} text={props.labelText} varianteLabel={props.varianteLabel}/>
+        <Input id={props.id} type={props.type} varianteInput={props.varianteInput}/>
+      </div>
+  );
+}
+
+export default FormCampo;
+=== src/components/molecules/SelectorFechaHora.jsx ===
+import Selector from "../atoms/Selector.jsx";
+
+function SelectorFechaHora(props) {
+    return (
+        <div>
+            <Selector
+                checked={props.checked}
+                onChange={props.onChange}
+                label="Seleccionar fecha y hora"
+            />
+
+            {props.checked && (
+                <div>
+                    <label>
+                        Fecha:
+                        <input
+                            type="date"
+                            value={props.fecha}
+                            onChange={props.onFechaChange}
+                        />
+                    </label>
+
+                    <label>
+                        Hora:
+                        <input
+                            type="time"
+                            value={props.hora}
+                            onChange={props.onHoraChange}
+                        />
+                    </label>
+                </div>
+            )}
+        </div>
+    );
+}
+
+export default SelectorFechaHora;
+//
+=== src/components/atoms/Icono.jsx ===
+//npm install react-icons
+//React icons instalado para este atomo
+import { FaUser } from "react-icons/fa";
+
+function Icono(props) {
+  const IconoSeleccionado = props.icono || FaUser;
+
+  return (
+    <IconoSeleccionado
+      size={props.tamano || 20}
+      color={props.color || "currentColor"}
+      title={props.titulo || ""}
+    />
+  );
+}
+
+export default Icono;
+
+=== src/components/atoms/Label.jsx ===
+function Label(props){
+    return (
+        <label htmlFor={props.for} className={props.varianteLabel}>
+            {props.text}
+        </label>
+    )
+}
+
+export default Label;
+=== src/components/atoms/EtiquetaEspecie.jsx ===
+import { etiquetaEspecie } from './atoms';
+
+function EtiquetaEspecie(props) {
+    const especie = props.especie || "Otros";
+    let color = "text-bg-secondary";
+
+    if (especie === "Perro" || especie === "Gato") {
+        color = "text-bg-primary";
+    } 
+    else if (especie === "Reptiles") {
+        color = "text-bg-success";
+    }
+    else if (especie === "Aves") {
+        color = "text-bg-secondary";
+    }
+    else if (especie === "Otros") {
+        color = "text-bg-light text-dark";
+    }
+
+    return (
+        <div className={`badge ${color}`}>
+            {especie}
+        </div>
+    );
+}
+
+export default EtiquetaEspecie;
+=== src/components/atoms/Boton.jsx ===
+function Boton(props) {
+  const variante = props.variante || "primary";
+  return (
+    <button className={`btn btn-${variante}`} onClick={props.onClick}>
+      {props.texto}
+    </button>
+  );
+}
+
+export default Boton;
+=== src/components/atoms/Selector.jsx ===
+function Selector (props)  {
+    return (
+        <label>
+        <input 
+            type="checkbox" 
+            checked={props.checked}
+            onChange={props.onChange}
+        />
+        <span>{props.label}</span>
+        </label>
+    )
+}
+
+export default Selector;
+
+=== src/components/atoms/EtiquetaEstadoCita.jsx ===
+import { etiquetaEstadoCita } from './atoms';
+
+function EtiquetaEstadoCita(props) {
+    const estado = props.estado || "Pendiente"; 
+    let color = "text-bg-secondary";
+
+    if (estado === "Pendiente") {
+        color = "text-bg-warning";
+    } 
+    else if (estado === "Confirmada") {
+        color = "text-bg-success";
+    } 
+    else if (estado === "Cancelada") {
+        color = "text-bg-danger";
+    }
+
+    return (
+        <div className={`badge ${color}`}>
+            {estado}
+        </div>
+    );
+}
+
+export default EtiquetaEstadoCita;
+
+=== src/components/atoms/Input.jsx ===
+function Input(props){
+    return (
+        <input 
+            id={props.id}
+            type={props.type}
+            className={props.varianteInput}
+        />
+    )
+}
+
+export default Input;
+=== src/components/organism/FormLogin.jsx ===
+import Boton from "../atoms/Boton";
+import FormCampo from "../molecules/FormCampo";
+
+function FormLogin() {
+    return (
+      <form className="FormLogin w-auto p-3 border-0 shadow-sm rounded-3 bg-white ">
+
+        <h2 className="mb-5 mt-3 fs-3 text-dark">Iniciar Sesión</h2>
+
+        <FormCampo 
+          id="email"
+          type="email"
+          labelText="Correo Electronico"
+          varianteInput="form-control border border-black"
+          varianteLabel="form-control border-0"
+        />
+
+        <FormCampo 
+          id="contraseña"
+          type="password"
+          labelText="Contraseña"
+          varianteInput="form-control border border-black"
+          varianteLabel="from-control border-0"
+        />
+
+        <Boton texto="Iniciar Sesión" />
+      </form>
+    )
+  
+}
+
+export default FormLogin;
+=== src/components/organism/ListaCategorias.jsx ===
+function ListaCategorias() {
+    return (
+        <div>
+            <h2>Lista de Categorías</h2>
+
+            <ul>
+                <li>Perros</li>
+                <li>Gatos</li>
+                <li>Aves</li>
+                <li>Otros</li>
+            </ul>
+        </div>
+    );
+}
+
+export default ListaCategorias;
+=== src/components/organism/Navbar.jsx ===
+import Boton from "../atoms/Boton";
+
+
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+
+function NavBar() {
+  return (
+    <Navbar expand="lg" className="bg-body-tertiary">
+    </Navbar>
+  );
+}
+
+export default NavBar;
+=== src/index.css ===
+:root {
+  --text: #6b6375;
+  --text-h: #08060d;
+  --bg: #fff;
+  --border: #e5e4e7;
+  --code-bg: #f4f3ec;
+  --accent: #aa3bff;
+  --accent-bg: rgba(170, 59, 255, 0.1);
+  --accent-border: rgba(170, 59, 255, 0.5);
+  --social-bg: rgba(244, 243, 236, 0.5);
+  --shadow:
+    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  color-scheme: light dark;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #9ca3af;
+    --text-h: #f3f4f6;
+    --bg: #16171d;
+    --border: #2e303a;
+    --code-bg: #1f2028;
+    --accent: #c084fc;
+    --accent-bg: rgba(192, 132, 252, 0.15);
+    --accent-border: rgba(192, 132, 252, 0.5);
+    --social-bg: rgba(47, 48, 58, 0.5);
+    --shadow:
+      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+  }
+
+  #social .button-icon {
+    filter: invert(1) brightness(2);
+  }
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  text-align: center;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+h1,
+h2 {
+  font-family: var(--heading);
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+h1 {
+  font-size: 56px;
+  letter-spacing: -1.68px;
+  margin: 32px 0;
+  @media (max-width: 1024px) {
+    font-size: 36px;
+    margin: 20px 0;
+  }
+}
+h2 {
+  font-size: 24px;
+  line-height: 118%;
+  letter-spacing: -0.24px;
+  margin: 0 0 8px;
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+}
+p {
+  margin: 0;
+}
+
+code,
+.counter {
+  font-family: var(--mono);
+  display: inline-flex;
+  border-radius: 4px;
+  color: var(--text-h);
+}
+
+code {
+  font-size: 15px;
+  line-height: 135%;
+  padding: 4px 8px;
+  background: var(--code-bg);
+}
+
+=== src/main.jsx ===
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css'
+import App from './App.jsx'
+
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+)
+
+=== src/App.jsx ===
+import { useState } from 'react'
+import heroImg from './assets/hero.png'
+import reactLogo from './assets/react.svg'
+import viteLogo from './assets/vite.svg'
+import InicioSesion from "./pages/InicioSesion"
+import './App.css'
+
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Categorias from "./pages/Categorias";
+import NoEncontrada from './pages/NoEncontrada'
+
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+
+        <Route path="/" element={<InicioSesion />} />
+
+        <Route path="/categorias" element={<Categorias />} />
+
+        <Route path="*" element={<NoEncontrada />} />
+
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+export default App;
+=== src/pages/Categorias.jsx ===
+import { Container, Row, Col } from "react-bootstrap";
+import ListaCategorias from "../components/organism/ListaCategorias";
+
+function Categorias() {
+    return (
+        <Container fluid className="categorias-container min-vh-100">
+
+            <Row className="justify-content-center">
+                <Col xs={12} className="text-center">
+                    <h1>Categorías</h1>
+                </Col>
+            </Row>
+
+            <Row className="justify-content-center">
+                <Col xs={12} md={10} lg={8}>
+                    <ListaCategorias />
+                </Col>
+            </Row>
+
+        </Container>
+    );
+}
+
+export default Categorias;
+=== src/pages/InicioSesion.jsx ===
+import { Container, Row, Col } from "react-bootstrap";
+import FormLogin from "../components/organism/FormLogin";
+
+function InicioSesion(props) {
+  return (
+    <Container fluid className=" login-container d-flex flex-column align-items-center justify-content-center min-vh-100">
+      <Row className="w-100 justify-content-center mw-100 ">
+          <Col xs={12} md={6} lg={4} className="login-columna">
+            <FormLogin />
+          </Col>
+      </Row>
+    </Container>
+  );
+}
+
+export default InicioSesion;
+=== src/pages/NoEncontrada.jsx ===
+function NoEncontrada(props) {
+  return (
+    <h1 style={{color: 'black'}}>Error 404: Pagina no encontrada</h1>
+  );
+}
+
+export default NoEncontrada;
+=== src/pages/Servicios.jsx ===
+
+=== src/App.css ===
+.counter {
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: var(--accent);
+  background: var(--accent-bg);
+  border: 2px solid transparent;
+  transition: border-color 0.3s;
+  margin-bottom: 24px;
+
+  &:hover {
+    border-color: var(--accent-border);
+  }
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+}
+
+.hero {
+  position: relative;
+
+  .base,
+  .framework,
+  .vite {
+    inset-inline: 0;
+    margin: 0 auto;
+  }
+
+  .base {
+    width: 170px;
+    position: relative;
+    z-index: 0;
+  }
+
+  .framework,
+  .vite {
+    position: absolute;
+  }
+
+  .framework {
+    z-index: 1;
+    top: 34px;
+    height: 28px;
+    transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg)
+      scale(1.4);
+  }
+
+  .vite {
+    z-index: 0;
+    top: 107px;
+    height: 26px;
+    width: auto;
+    transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg)
+      scale(0.8);
+  }
+}
+
+#center {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  place-content: center;
+  place-items: center;
+  flex-grow: 1;
+
+  @media (max-width: 1024px) {
+    padding: 32px 20px 24px;
+    gap: 18px;
+  }
+}
+
+#next-steps {
+  display: flex;
+  border-top: 1px solid var(--border);
+  text-align: left;
+
+  & > div {
+    flex: 1 1 0;
+    padding: 32px;
+    @media (max-width: 1024px) {
+      padding: 24px 20px;
+    }
+  }
+
+  .icon {
+    margin-bottom: 16px;
+    width: 22px;
+    height: 22px;
+  }
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+#docs {
+  border-right: 1px solid var(--border);
+
+  @media (max-width: 1024px) {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+}
+
+#next-steps ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 8px;
+  margin: 32px 0 0;
+
+  .logo {
+    height: 18px;
+  }
+
+  a {
+    color: var(--text-h);
+    font-size: 16px;
+    border-radius: 6px;
+    background: var(--social-bg);
+    display: flex;
+    padding: 6px 12px;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: box-shadow 0.3s;
+
+    &:hover {
+      box-shadow: var(--shadow);
+    }
+    .button-icon {
+      height: 18px;
+      width: 18px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    li {
+      flex: 1 1 calc(50% - 8px);
+    }
+
+    a {
+      width: 100%;
+      justify-content: center;
+      box-sizing: border-box;
+    }
+  }
+}
+
+#spacer {
+  height: 88px;
+  border-top: 1px solid var(--border);
+  @media (max-width: 1024px) {
+    height: 48px;
+  }
+}
+
+.ticks {
+  position: relative;
+  width: 100%;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: -4.5px;
+    border: 5px solid transparent;
+  }
+
+  &::before {
+    left: 0;
+    border-left-color: var(--border);
+  }
+  &::after {
+    right: 0;
+    border-right-color: var(--border);
+  }
+}
+
+.login-container {
+  background-color: #E3D9D8;
+}
+
+.login-columna {
+  max-width: 400px;
+}

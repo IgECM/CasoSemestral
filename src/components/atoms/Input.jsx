@@ -4,6 +4,8 @@ function Input(props){
             id={props.id}
             type={props.type}
             className={props.varianteInput}
+            value={props.value}
+            onChange={props.onChange}
         />
     )
 }
