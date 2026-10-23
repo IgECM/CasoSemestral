@@ -1,7 +1,11 @@
 import { Container, Row, Col } from "react-bootstrap";
 import FormLogin from "../components/organism/FormLogin";
+import { useTituloPagina } from '../hooks/useTituloPagina';
+
 
 function InicioSesion(props) {
+  useTituloPagina('Inicio de Sesion')
+  
   return (
     <Container fluid className=" login-container d-flex flex-column align-items-center justify-content-center min-vh-100">
       <Row className="w-100 justify-content-center mw-100 ">

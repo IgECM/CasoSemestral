@@ -7,7 +7,7 @@ function Categorias() {
 
             <Row className="justify-content-center">
                 <Col xs={12} className="text-center">
-                    <h1>Categorías</h1>
+                    <h1 className="text-dark">Categorías</h1>
                 </Col>
             </Row>
 

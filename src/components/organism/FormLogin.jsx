@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Boton from "../atoms/Boton";
 import FormCampo from "../molecules/FormCampo";
+import { useNavigate } from 'react-router-dom';
 
 function FormLogin() {
   const [esRegistro, setEsRegistro] = useState(false);
@@ -8,6 +9,8 @@ function FormLogin() {
   const [password, setPassword] = useState("");
   const [nombre, setNombre] = useState("");
   const [mensaje, setMensaje] = useState("");
+  
+  const navigate = useNavigate();
 
   function cambiarModo() {
     setEsRegistro(!esRegistro);
@@ -49,6 +52,9 @@ function FormLogin() {
       setEsRegistro(false);
     } else {
       setMensaje("Has iniciado sesión con éxito");
+      setTimeout(() => {
+        navigate('/');
+      }, 1000);
     }
   }
 
@@ -112,17 +118,17 @@ function FormLogin() {
       />
 
       <section className="d-grid gap-2 mb-3 mt-4">
-        <Boton texto={textoBoton} variante="primary" />
+        <Boton 
+        texto={textoBoton}
+        />
       </section>
 
       <section className="text-center">
-        <button
-          type="button"
-          className="btn btn-link text-decoration-none p-0"
+        <Boton
+          texto={textoEnlace}
+          variante="link text-decoration-none p-0"
           onClick={cambiarModo}
-        >
-          {textoEnlace}
-        </button>
+        />
       </section>
     </form>
   );
