@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import FormularioSolicitudCita from "../components/organism/FormularioSolicitudCita";
 
-function DetalleServicio() {
+function SolicitarCita() {
   const [mostrarFormulario, setMostrarFormulario] = useState(false);
 
   const servicio = {
@@ -53,4 +53,4 @@ function DetalleServicio() {
   );
 }
 
-export default DetalleServicio;
+export default SolicitarCita;

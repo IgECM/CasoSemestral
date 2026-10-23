@@ -10,7 +10,7 @@ import InicioSesion from "./pages/InicioSesion";
 import Servicios from "./pages/Servicios";
 import Categorias from "./pages/Categorias";
 import NoEncontrada from './pages/NoEncontrada';
-import DetalleServicio from './pages/DetalleServicio'
+import SolicitarCita from './pages/SolicitarCita'
 import CitaConf from './pages/CitaConfirmada'
 import MisCitas from './pages/MisCitas'
 import Nosotros from './pages/Nosotros'
@@ -31,7 +31,7 @@ function App() {
 
         <Route path="/categorias" element={<Categorias />} />
 
-        <Route path="/detalle" element={<DetalleServicio />} />
+        <Route path="/solicitar-cita" element={<SolicitarCita />} />
 
         <Route path="/confirm" element={<CitaConf />} />
 
