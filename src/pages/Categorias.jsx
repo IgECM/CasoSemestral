@@ -11,7 +11,7 @@ function Categorias() {
         </p>
 
         <h1 className="fw-bold titulo-h1">
-          Categorías de servicios
+          Nuestros Servicios
         </h1>
 
         <p className="text-muted">

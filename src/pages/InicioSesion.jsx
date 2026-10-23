@@ -3,7 +3,7 @@ import FormLogin from "../components/organism/FormLogin";
 import { useTituloPagina } from '../hooks/useTituloPagina';
 
 
-function InicioSesion(props) {
+function InicioSesion() {
   useTituloPagina('Inicio de Sesion')
   
   return (

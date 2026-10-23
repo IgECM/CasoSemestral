@@ -13,6 +13,7 @@ import NoEncontrada from './pages/NoEncontrada';
 import DetalleServicio from './pages/DetalleServicio'
 import CitaConf from './pages/CitaConfirmada'
 import MisCitas from './pages/MisCitas'
+import Nosotros from './pages/Nosotros'
 
 
 function App() {
@@ -23,6 +24,8 @@ function App() {
         <Route path="/" element={<Inicio />} />
 
         <Route path="/login" element={<InicioSesion />} />
+
+        <Route path="/nosotros" element={<Nosotros />} />
 
         <Route path="/servicios" element={<Servicios />} />
 
