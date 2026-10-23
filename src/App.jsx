@@ -10,6 +10,9 @@ import InicioSesion from "./pages/InicioSesion";
 import Servicios from "./pages/Servicios";
 import Categorias from "./pages/Categorias";
 import NoEncontrada from './pages/NoEncontrada';
+import DetalleServicio from './pages/DetalleServicio'
+import CitaConf from './pages/CitaConfirmada'
+import MisCitas from './pages/MisCitas'
 
 
 function App() {
@@ -24,6 +27,12 @@ function App() {
         <Route path="/servicios" element={<Servicios />} />
 
         <Route path="/categorias" element={<Categorias />} />
+
+        <Route path="/detalle" element={<DetalleServicio />} />
+
+        <Route path="/confirm" element={<CitaConf />} />
+
+        <Route path="/miscitas" element={<MisCitas />} />
 
         <Route path="*" element={<NoEncontrada />} />
 

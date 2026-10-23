@@ -1,24 +1,27 @@
-import { Container, Row, Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import ListaCategorias from "../components/organism/ListaCategorias";
+import "../App.css";
 
 function Categorias() {
-    return (
-        <Container fluid className="categorias-container min-vh-100">
+  return (
+    <Container className="categorias-container py-5">
+      <header className="text-center mb-5">
+        <p className="text-primary fw-semibold mb-2">
+          VETERINARIA SAN MARCOS
+        </p>
 
-            <Row className="justify-content-center">
-                <Col xs={12} className="text-center">
-                    <h1 className="text-dark">Categorías</h1>
-                </Col>
-            </Row>
+        <h1 className="fw-bold titulo-h1">
+          Categorías de servicios
+        </h1>
 
-            <Row className="justify-content-center">
-                <Col xs={12} md={10} lg={8}>
-                    <ListaCategorias />
-                </Col>
-            </Row>
+        <p className="text-muted">
+          Encuentra la atención que necesita tu mascota.
+        </p>
+      </header>
 
-        </Container>
-    );
+      <ListaCategorias />
+    </Container>
+  );
 }
 
 export default Categorias;

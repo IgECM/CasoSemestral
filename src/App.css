@@ -183,10 +183,24 @@
   }
 }
 
-.login-container {
+.login-container {/*Utilizado en NoEncontrada, Login*/
   background-color: #E3D9D8;
 }
 
 .login-columna {
   max-width: 400px;
+}
+
+
+.contenedor-no-encontrada {/*Utilizado en NoEncontrada*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  gap: 20px;
+}
+.titulo-h1 {
+  color: black;
 }

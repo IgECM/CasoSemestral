@@ -1,12 +1,15 @@
 function Input(props){
     return (
-        <input 
+        <input
             id={props.id}
-            type={props.type}
-            className={props.varianteInput}
+            name={props.name}
+            type={props.type || "text"}
+            className={`form-control ${props.className || ""}`}
+            placeholder={props.placeholder || ""}
             value={props.value}
             onChange={props.onChange}
-        />
+            required={props.required}
+    />
     )
 }
 
