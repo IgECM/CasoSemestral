@@ -15,24 +15,51 @@ El proyecto esta estructurado de la siguiente forma:
 
 ```text
 src/
-    /components/
-        /atoms/
-        >  Boton.jsx
-        >  EtiquetaEspecie.jsx
-        >  EtiquetaEstadoCita.jsx
-        >  Input.jsx
-        >  Label.jsx
-        >  Selector.jsx
-        /molecules/
-        >  FormCampo.jsx
-        /organism/
-        >  FormLogin.jsx
-        >  Navbar.jsx
-        /templates/
-        >  ...
-    /pages/
-        InicioSesion.jsx
-        Servicios.jsx
+│
+├── assets/
+│
+├── components/
+│   ├── atoms/
+│   │   ├── Boton.jsx
+│   │   ├── EtiquetaEspecie.jsx
+│   │   ├── EtiquetaEstadoCita.jsx
+│   │   ├── Icono.jsx
+│   │   ├── Input.jsx
+│   │   ├── Label.jsx
+│   │   └── Selector.jsx
+│   ├── molecules/
+│   │   ├── CampoFormulario.jsx
+│   │   ├── FilaCita.jsx
+│   │   ├── FormCampo.jsx
+│   │   └── SelectorFechaHora.jsx
+│   ├── organism/
+│   │   ├── AdminServicios.jsx
+│   │   ├── FormLogin.jsx
+│   │   ├── ListaCategorias.jsx
+│   │   └── Navbar.jsx
+│   └── templates/
+│       └── PlantillaPublica.jsx
+│
+├── context/
+│   └── serviciosContext.jsx
+│
+├── data/
+│   └── serviciosData.js
+│
+├── hooks/
+│   └── useTituloPagina.js
+│
+├── pages/
+│   ├── Categorias.jsx
+│   ├── Inicio.jsx
+│   ├── InicioSesion.jsx
+│   ├── NoEncontrada.jsx
+│   └── Servicios.jsx
+│
+├── services/
+│   └── serviciosService.js
+│
+└── utils/
 ```
 Para este trabajo, se esta usando React y Bootstrap.
 Para que este se ejecute, se tiene que correr:
