@@ -15,8 +15,6 @@ function Navbar(props) {
     <nav className="navbar navbar-expand-lg bg-body-tertiary border-bottom border-dark border-1 sticky-top">
       <div className="container-fluid">
         
-        {/* Al devolverle el href="/...", el navegador vuelve a poner la "manito" 
-            automáticamente y permite abrir en una pestaña nueva si el usuario quiere */}
         <a className="navbar-brand" href="/" onClick={(e) => ir(e, '/')}>
           Veterinaria San Marcos
         </a>
@@ -43,8 +41,6 @@ function Navbar(props) {
               </a>
             </li>
             <li className="nav-item dropdown">
-              {/* Este enlace no usa la función 'ir' porque su único trabajo es 
-                  desplegar el menú de Bootstrap, no cambiar de página */}
               <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Citas
               </a>
@@ -69,7 +65,6 @@ function Navbar(props) {
               <span className="fw-medium">Iniciar Sesión</span>
             </a>
           </div>
-          
         </div>
       </div>
     </nav>
