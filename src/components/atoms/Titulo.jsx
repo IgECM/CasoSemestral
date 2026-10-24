@@ -4,7 +4,7 @@ function Titulo(props) {
   const Etiqueta = `h${props.nivel || 1}`;
   
   return (
-    <Etiqueta className={props.className}>
+    <Etiqueta className={props.className} style={props.style}>
       {props.texto}
     </Etiqueta>
   );

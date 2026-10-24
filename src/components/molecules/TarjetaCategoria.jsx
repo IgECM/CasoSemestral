@@ -18,7 +18,7 @@ function TarjetaCategoria({
   <Icono
     icono={categoria.icono}
     tamano={40}
-    color="#0d6efd"
+    color="#3bbcb3"
     titulo={categoria.nombre}
   />
 </div>
@@ -43,6 +43,7 @@ function TarjetaCategoria({
                 : "Ver servicios"
             }
             variante={seleccionada ? "success" : "primary"}
+            className={!seleccionada ? "btn-personalizado-servicios" : ""}
             onClick={() => onSeleccionar(categoria.id)}
           />
         </div>

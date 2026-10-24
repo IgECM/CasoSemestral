@@ -2,8 +2,6 @@ import React from 'react';
 import Icono from '../atoms/Icono';
 
 function Navbar(props) {
-  // Esta función intercepta el clic: cancela la recarga natural del <a> 
-  // y le avisa a la PlantillaPublica hacia dónde debe navegar.
   function ir(evento, ruta) {
     evento.preventDefault();
     if (props.onNavegar) {
@@ -12,17 +10,17 @@ function Navbar(props) {
   }
 
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary border-bottom border-dark border-1 sticky-top">
+    <nav className="navbar navbar-expand-lg bg-body-tertiary border-bottom border-dark border-1 sticky-top py-3">
       <div className="container-fluid">
-        
+
         <a className="navbar-brand" href="/" onClick={(e) => ir(e, '/')}>
           Veterinaria San Marcos
         </a>
-        
+
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
-        
+
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
@@ -58,9 +56,9 @@ function Navbar(props) {
               </ul>
             </li>
           </ul>
-          
+
           <div className="d-flex align-items-center">
-            <a href="/login" onClick={(e) => ir(e, '/login')} className="text-decoration-none text-dark d-flex align-items-center gap-2 custom-login-link">
+            <a href="/login" onClick={(e) => ir(e, '/login')} className=" text-decoration-none d-flex align-items-center gap-2 text-dark px-0 custom-login-link">
               <Icono tamano={22} color="#858383" />
               <span className="fw-medium">Iniciar Sesión</span>
             </a>

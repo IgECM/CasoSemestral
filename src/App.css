@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght,YOPQ@100..900,300&display=swap');
+
 .counter {
   font-size: 16px;
   padding: 5px 10px;
@@ -238,8 +240,7 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 2;
 }
 
-/* Sección con fondo blanco y elementos decorativos a los lados */
-.seccion-mision-vision {
+.seccion-veterinaria-contexto {
   position: relative;
   background-color: #ffffff;
   padding: 6rem 1rem;
@@ -268,9 +269,9 @@ h1, h2, h3, h4, h5, h6 {
   object-fit: contain;
 }
 
-/* Bloque inferior con color de fondo y forma de onda */
+
 .bloque-fondo {
-  background-color: #3bbcb3; /* Un tono turquesa/celeste acorde a veterinaria */
+  background-color: #3bbcb3;
   color: white;
   padding-bottom: 4rem;
   position: relative;
@@ -303,4 +304,28 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #ffffff;
   max-width: 650px;
   margin: 0 auto;
+}
+
+.fondo-servicios {
+  background-image:linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('/img/servicio-pagina-foto-background.webp');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 220px;
+  
+}
+
+.navbar-nav .nav-link:hover,
+.dropdown-item:hover,
+.custom-login-link:hover {
+  color: #3bbcb3 !important;
+}
+
+.dropdown-item:hover {
+  background-color: #e6f7f6 !important; 
+}
+
+
+.fuente-kumbh {
+  font-family: 'Kumbh Sans', sans-serif !important;
 }

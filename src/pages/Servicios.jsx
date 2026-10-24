@@ -1,28 +1,25 @@
 import { Container } from "react-bootstrap";
 import PlantillaPublica from "../components/templates/PlantillaPublica";
 import ListaCategorias from "../components/organism/ListaCategorias";
+import Titulo from "../components/atoms/Titulo";
+import Parrafo from "../components/atoms/Parrafo";
 import "../App.css";
 
 function Servicios() {
   return (
     <PlantillaPublica>
-      <Container className="categorias-container py-5">
-        <header className="text-center mb-5">
-          <p className="text-primary fw-semibold mb-2">
-            VETERINARIA SAN MARCOS
-          </p>
+      <section className="categorias-section py-0">
+        
+        <div className="fondo-servicios mb-5 d-flex flex-column justify-content-center text-white">
+          <Titulo nivel={1} texto="Nuestros Servicios" className="fw-bold text-white mb-2" />
+          <Parrafo texto="Encuentra la atención que necesita tu mascota." className="text-light" />
+        </div>
 
-          <h1 className="fw-bold titulo-h1">
-            Nuestros Servicios
-          </h1>
+        <Container className="servicios-container pb-5">
+          <ListaCategorias />
+        </Container>
 
-          <p className="text-muted">
-            Encuentra la atención que necesita tu mascota.
-          </p>
-        </header>
-
-        <ListaCategorias />
-      </Container>
+      </section>
     </PlantillaPublica>
   );
 }

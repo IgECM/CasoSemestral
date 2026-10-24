@@ -20,15 +20,15 @@ function Inicio() {
       <section className="inicio-gif-container">
         <div className="inicio-overlay"></div>
 
-        <div className="container py-5 inicio-content">
+        <div className="container py-5 inicio-content fuente-kumbh">
           <Parrafo className="text-uppercase fw-semibold mb-1" texto="Clínica Veterinaria San Marcos" style={{ letterSpacing: '2px' }} />
-          <Titulo nivel={1} texto="BIENVENIDOS" className="display-3 fw-bold text-white mb-3" />
+          <Titulo nivel={1} texto="BIENVENIDOS" className="display-3 fw-bold text-white mb-3 fuente-kumbh" />
           <Parrafo className="fs-4 fw-medium text-light mb-4" texto="ATENCIÓN INTEGRAL Y CARIÑO PARA TUS MASCOTAS" />
 
           <div className="d-flex justify-content-center gap-3">
             <Boton
               texto="Solicitar Cita"
-              variante="light fw-bold text-dark px-4 py-2 rounded-pill shadow-sm"
+              variante="light fw-bold px-4 py-2 rounded-pill shadow-sm"
               onClick={() => navigate('/solicitar-cita')}
             />
             <Boton
@@ -41,22 +41,22 @@ function Inicio() {
       </section>
 
 
-      <section className="py-5 text-white text-center seccion-urgencia" style={{ backgroundColor: '#ff7b82' }}>
+      <section className="py-5 text-white text-center fuente-kumbh seccion-urgencia" style={{ backgroundColor: '#ff7b82' }}>
         <div className="m-4 justify-content-center">
           <Parrafo className="fw-bold fs-5 text-uppercase mb-3" texto="En caso de urgencia, dirigirse a nuestra sucursal en Rancagua" style={{ letterSpacing: '1px' }} />
           <a
             href="https://www.google.com/maps/search/?api=1&query=Rancagua"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-primary fw-bold px-4 py-2 rounded-pill shadow-sm"
+            className="btn btn-light fw-bold px-4 py-2 rounded-pill shadow-sm"
           >
-            VER UBICACIÓN
+            Ver Ubicación
           </a>
         </div>
       </section>
 
 
-      <section className="seccion-mision-vision">
+      <section className="seccion-veterinaria-contexto fuente-kumbh">
         <Imagen
           src="/img/gato-izq-inicio.png"
           alt="Gato decorativo Izquierda"
@@ -64,7 +64,7 @@ function Inicio() {
         />
 
         <div className="container text-center px-4" style={{ maxWidth: '700px' }}>
-          <Titulo nivel={2} texto="VETERINARIA SAN MARCOS" className="fw-bold text-primary mb-4" />
+          <Titulo nivel={2} texto="VETERINARIA SAN MARCOS" className="fw-bold text-dark mb-4 fuente-kumbh" style={{fontSize: '30px'}}/>  
           <Parrafo
             texto="En nuestra clínica, nos dedicamos apasionadamente al cuidado y bienestar de tus compañeros peludos. Somos un equipo comprometido de profesionales dedicados a proporcionar la mejor atención médica y amorosa a tus mascotas."
             className="text-secondary mb-3"
@@ -83,7 +83,7 @@ function Inicio() {
       </section>
 
 
-      <section className="bloque-fondo">
+      <section className="bloque-fondo fuente-kumbh">
         <div className="container py-4">
           <div className="row g-4 text-center">
 
@@ -116,12 +116,12 @@ function Inicio() {
       </section>
 
 
-      <section className="seccion-categorias p-5">
+      <section className="seccion-categorias p-5 fuente-kumbh">
         <div className="container text-center p-5">
 
           <div className="mb-5">
-            <Titulo nivel={2} texto="NUESTRAS CATEGORÍAS" className="fw-bold text-primary" />
-            <Parrafo texto="Explora las áreas de atención y especialidades pensadas para cada tipo de mascota" className="text-secondary" />
+            <Titulo nivel={2} texto="NUESTRAS CATEGORÍAS" className="fw-bold text-dark fuente-kumbh" style={{fontSize: '30px'}} />
+            <Parrafo texto="Explora las áreas de atención y especialidades pensadas para cada tipo de mascota" className="text-secondary " />
           </div>
 
           <div className="row g-4 justify-content-center">
@@ -167,11 +167,11 @@ function Inicio() {
       </section>
 
 
-      <section className="seccion-visitanos-y-mapa py-5">
+      <section className="seccion-visitanos-y-mapa py-5 fuente-kumbh">
         <div className="container text-center">
 
-          <div className="mb-5">
-            <Titulo nivel={2} texto="VISÍTANOS" className="fw-bold text-primary mb-2" />
+          <div className="mb-3">
+            <Titulo nivel={2} texto="VISÍTANOS" className="fw-bold text-dark mb-2 fuente-kumbh" style={{fontSize: '30px' }}/>
             <Parrafo texto="¡Visítanos y descubre por qué somos la mejor opción para el cuidado de tu mascota!" className="text-secondary" />
           </div>
 
@@ -195,8 +195,8 @@ function Inicio() {
                   <Icono icono={FaMapMarkerAlt} tamano={24} />
                 </div>
                 <div>
-                  <h6 className="fw-bold mb-1">Sucursal Principal:</h6>
-                  <p className="text-secondary small mb-0">José Alberto Bravo 175, Buin, Región Metropolitana</p>
+                  <Titulo nivel={6}  texto= "Sucursal Principal:" className="fw-bold mb-1"/>
+                  <Parrafo texto= "Rancagua, Región de O'Higgins" className="text-secondary small mb-0"/>
                 </div>
               </div>
 
