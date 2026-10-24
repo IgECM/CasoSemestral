@@ -8,18 +8,20 @@ import "../App.css";
 function Servicios() {
   return (
     <PlantillaPublica>
-      <section className="categorias-section py-0">
+      <main className="fuente-kumbh pb-4" style={{ backgroundColor: '#DEDEDE' }}>
+        <section className="categorias-section py-0">
         
-        <div className="fondo-servicios mb-5 d-flex flex-column justify-content-center text-white">
-          <Titulo nivel={1} texto="Nuestros Servicios" className="fw-bold text-white mb-2" />
-          <Parrafo texto="Encuentra la atención que necesita tu mascota." className="text-light" />
-        </div>
+          <div className="fondo-servicios mb-5 d-flex flex-column justify-content-center text-white">
+            <Titulo nivel={1} texto="Nuestros Servicios" className="fw-bold text-white mb-2" />
+            <Parrafo texto="Encuentra la atención que necesita tu mascota." className="text-light" />
+          </div>
 
-        <Container className="servicios-container pb-5">
-          <ListaCategorias />
-        </Container>
+          <Container className="servicios-container pb-5 mb-5">
+            <ListaCategorias />
+          </Container>
 
-      </section>
+        </section>
+      </main>
     </PlantillaPublica>
   );
 }

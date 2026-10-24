@@ -242,7 +242,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .seccion-veterinaria-contexto {
   position: relative;
-  background-color: #ffffff;
+  background-color: #DEDEDE;
   padding: 6rem 1rem;
   overflow: hidden;
 }
@@ -280,9 +280,9 @@ h1, h2, h3, h4, h5, h6 {
 .footer-personalizado {
   background-color: #212529; 
   color: #ffffff;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-  margin-top: 4rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
 }
 
 .mapa-iframe {
