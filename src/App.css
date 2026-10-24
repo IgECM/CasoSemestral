@@ -238,3 +238,69 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   z-index: 2;
 }
+
+/* Sección con fondo blanco y elementos decorativos a los lados */
+.seccion-mision-vision {
+  position: relative;
+  background-color: #ffffff;
+  padding: 6rem 1rem;
+  overflow: hidden;
+}
+
+/* Imagen del gatito en la esquina izquierda */
+.img-mascota-izq {
+  position: absolute;
+  left: -200px; 
+  top: 50%;
+  transform: translateY(-50%);
+  width: 550px; 
+  height: auto;
+  object-fit: contain;
+}
+
+/* Imagen del perrito en la esquina derecha */
+.img-mascota-der {
+  position: absolute;
+  right: -150px;
+  top: 52%;
+  transform: translateY(-50%);
+  width: 450px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Bloque inferior con color de fondo y forma de onda */
+.bloque-fondo {
+  background-color: #3bbcb3; /* Un tono turquesa/celeste acorde a veterinaria */
+  color: white;
+  padding-bottom: 4rem;
+  position: relative;
+}
+
+.footer-personalizado {
+  background-color: #212529; 
+  color: #ffffff;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.mapa-iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+  border-radius: 0.5rem;
+}
+
+
+.seccion-visitanos {
+  background-color: #f8f9fa; 
+  padding: 5rem 1rem;
+}
+
+.tarjeta-mapa {
+  border: none;
+  border-radius: 1rem;
+  background-color: #ffffff;
+  max-width: 650px;
+  margin: 0 auto;
+}
