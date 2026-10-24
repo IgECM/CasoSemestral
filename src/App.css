@@ -227,7 +227,6 @@ h1, h2, h3, h4, h5, h6 {
 .inicio-overlay {
   position: absolute;
   top: 0;
-  start: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.45);
@@ -282,6 +281,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #ffffff;
   padding-top: 4rem;
   padding-bottom: 4rem;
+  margin-top: 4rem;
 }
 
 .mapa-iframe {

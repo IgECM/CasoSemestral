@@ -4,8 +4,11 @@ import Titulo from '../components/atoms/Titulo';
 import Parrafo from '../components/atoms/Parrafo';
 import Imagen from '../components/atoms/Imagen';
 import TarjetaNosotros from '../components/molecules/TarjetaNosotros';
+import { useTituloPagina } from '../hooks/useTituloPagina';
 
 function Nosotros() {
+  useTituloPagina('Nosotros')
+  
   return (
     <PlantillaPublica>
       <div className="container py-5 my-4">

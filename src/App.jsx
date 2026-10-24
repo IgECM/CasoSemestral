@@ -8,7 +8,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Inicio from "./pages/Inicio";
 import InicioSesion from "./pages/InicioSesion";
 import Servicios from "./pages/Servicios";
-import Servicios from "./pages/Servicio";
 import NoEncontrada from './pages/NoEncontrada';
 import SolicitarCita from './pages/SolicitarCita'
 import CitaConf from './pages/CitaConfirmada'

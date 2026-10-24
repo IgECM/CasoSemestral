@@ -13,7 +13,7 @@ function ListaCategorias() {
 
   return (
     <>
-      <Row className="g-4">
+      <Row className="g-4 py-5">
         {categorias.map((categoria) => (
           <Col xs={12} sm={6} lg={3} key={categoria.id}>
             <TarjetaCategoria

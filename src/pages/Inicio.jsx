@@ -8,9 +8,11 @@ import TarjetaMascota from '../components/molecules/TarjetaMascota';
 import { FaMapMarkerAlt, FaPhoneAlt, FaClock, FaCat, FaPaw, FaDog } from "react-icons/fa";
 import Icono from "../components/atoms/Icono";
 import { useNavigate } from 'react-router-dom';
+import { useTituloPagina } from '../hooks/useTituloPagina';
 
 function Inicio() {
   const navigate = useNavigate();
+  useTituloPagina('Inicio')
 
   return (
     <PlantillaPublica>

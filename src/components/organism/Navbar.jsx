@@ -12,7 +12,7 @@ function Navbar(props) {
   }
 
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+    <nav className="navbar navbar-expand-lg bg-body-tertiary border-bottom border-dark border-1 sticky-top">
       <div className="container-fluid">
         
         {/* Al devolverle el href="/...", el navegador vuelve a poner la "manito" 
