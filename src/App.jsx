@@ -27,9 +27,7 @@ function App() {
 
         <Route path="/nosotros" element={<Nosotros />} />
 
-        <Route path="/servicios" element={<Servicios />} />
-
-        <Route path="/categorias" element={<Categorias />} />
+        <Route path="/servicios" element={<Categorias />} />
 
         <Route path="/solicitar-cita" element={<SolicitarCita />} />
 
