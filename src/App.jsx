@@ -8,7 +8,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Inicio from "./pages/Inicio";
 import InicioSesion from "./pages/InicioSesion";
 import Servicios from "./pages/Servicios";
-import Categorias from "./pages/Categorias";
+import Servicios from "./pages/Servicio";
 import NoEncontrada from './pages/NoEncontrada';
 import SolicitarCita from './pages/SolicitarCita'
 import CitaConf from './pages/CitaConfirmada'
@@ -27,7 +27,7 @@ function App() {
 
         <Route path="/nosotros" element={<Nosotros />} />
 
-        <Route path="/servicios" element={<Categorias />} />
+        <Route path="/servicios" element={<Servicios />} />
 
         <Route path="/solicitar-cita" element={<SolicitarCita />} />
 
