@@ -43,7 +43,6 @@ function TarjetaCategoria({
                 : "Ver servicios"
             }
             variante={seleccionada ? "success" : "primary"}
-            className={!seleccionada ? "btn-personalizado-servicios" : ""}
             onClick={() => onSeleccionar(categoria.id)}
           />
         </div>

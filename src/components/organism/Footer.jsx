@@ -1,6 +1,3 @@
-import { Container } from 'react-bootstrap'
-import React from 'react';
-
 function Footer() {
   return (
     <footer className="footer-personalizado bg-dark text-white text-center">

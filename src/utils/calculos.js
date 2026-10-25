@@ -1,9 +1,11 @@
+export const RECARGO_FUERA_DE_HORARIO = 10000;
+
 export function calcularPrecioTotal(servicio, esFueraDeHorario) {
-  let precioBase = servicio.precio;
-  
+  const precioBase = servicio.precio;
+
   if (esFueraDeHorario === true) {
-    return precioBase + 10000;
+    return precioBase + RECARGO_FUERA_DE_HORARIO;
   }
-  
+
   return precioBase;
 }

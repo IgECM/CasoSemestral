@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Boton from "../atoms/Boton";
-import FormCampo from "../molecules/FormCampo";
+import CampoFormulario from "../molecules/CampoFormulario";
 import { useNavigate } from 'react-router-dom';
 
 function FormLogin() {
@@ -9,7 +9,7 @@ function FormLogin() {
   const [password, setPassword] = useState("");
   const [nombre, setNombre] = useState("");
   const [mensaje, setMensaje] = useState("");
-  
+
   const navigate = useNavigate();
 
   function cambiarModo() {
@@ -47,7 +47,7 @@ function FormLogin() {
         setMensaje("Escribe tu nombre:");
         return;
       }
-      
+
       setMensaje("Usuario registrado correctamente");
       setEsRegistro(false);
     } else {
@@ -79,53 +79,50 @@ function FormLogin() {
       )}
 
       {esRegistro === true && (
-        <FormCampo 
-          id="nombre"
-          type="text"
-          labelText="Nombre"
-
-          varianteInput="form-control border border-black"
-          varianteLabel="form-label"
-          
+        <CampoFormulario
+          name="nombre"
+          label="Nombre"
+          varianteLabel="form-label text-start d-block fw-semibold"
+          placeholder="Ingresa tu nombre completo"
           value={nombre}
           onChange={guardarNombre}
+          required
         />
       )}
 
-      <FormCampo 
-        id="email"
+      <CampoFormulario
+        name="email"
         type="email"
-
-        labelText="Correo Electrónico"
-
-        varianteInput="form-control border border-black"
-        varianteLabel="form-label"
-
+        label="Correo Electronico"
+        varianteLabel="form-label text-start d-block fw-semibold"
+        placeholder="ejemplo@correo.com"
         value={email}
         onChange={guardarEmail}
+        required
       />
 
-      <FormCampo 
-        id="contrasena"
+      <CampoFormulario
+        campoFormulario="mb-5"
+        name="password"
         type="password"
-        labelText="Contraseña"
-
-        varianteInput="form-control border border-black"
-        varianteLabel="form-label"
-
+        label="Contraseña"
+        varianteLabel="form-label text-start d-block fw-semibold"
+        placeholder="Ingresa tu contraseña"
         value={password}
         onChange={guardarPassword}
+        required
       />
 
       <section className="d-grid gap-2 mb-3 mt-4">
-        <Boton 
-        texto={textoBoton}
+        <Boton
+          texto={textoBoton}
         />
       </section>
 
       <section className="text-center">
         <Boton
           texto={textoEnlace}
+          type="button"
           variante="link text-decoration-none p-0"
           onClick={cambiarModo}
         />

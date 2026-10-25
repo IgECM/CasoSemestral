@@ -1,5 +1,3 @@
-import { etiquetaEstadoCita } from './atoms';
-
 function EtiquetaEstadoCita(props) {
     const estado = props.estado || "Pendiente"; 
     let color = "text-bg-secondary";

@@ -1,4 +1,3 @@
-
 import Label from "../atoms/Label";
 import Input from "../atoms/Input";
 import Icono from "../atoms/Icono";
@@ -7,10 +6,11 @@ function CampoFormulario(props) {
   const id = props.id || props.name;
 
   return (
-    <div className="campo-formulario ">
+    <div className={`campo-formulario ${props.className || 'mb-3'}`}>
       <Label
         texto={props.label}
         htmlFor={id}
+        varianteLabel={props.varianteLabel}
       />
 
       <div className="campo-formulario-input">

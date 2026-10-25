@@ -1,5 +1,7 @@
 import { useState } from "react";
 import CampoFormulario from "../molecules/CampoFormulario";
+import Label from "../atoms/Label";
+import Boton from "../atoms/Boton";
 
 function FormularioSolicitudCita({ servicio, onCancelar, onEnviar }) {
   const [formulario, setFormulario] = useState({
@@ -101,7 +103,7 @@ function FormularioSolicitudCita({ servicio, onCancelar, onEnviar }) {
     >
       <h3 className="mb-3">Solicitar una cita</h3>
 
-      <p className="text-muted">
+      <p className="text-muted mb-3">
         Servicio:{" "}
         {typeof servicio === "string"
           ? servicio
@@ -116,54 +118,56 @@ function FormularioSolicitudCita({ servicio, onCancelar, onEnviar }) {
 
       <div className="row g-3">
         <div className="col-12 col-md-6">
-    <CampoFormulario
-      name="nombre"
-      label="Nombre del dueño"
-      placeholder="Ingresa tu nombre"
-      value={formulario.nombre}
-      onChange={actualizarCampo}
-      required
-    />
-  </div>
+          <CampoFormulario
+            name="nombre"
+            label="Nombre del dueño"
+            placeholder="Ingresa tu nombre"
+            varianteLabel="form-label text-start d-block fw-semibold"
+            value={formulario.nombre}
+            onChange={actualizarCampo}
+            required
+          />
+        </div>
 
-  <div className="col-12 col-md-6">
-    <CampoFormulario
-      name="apellidos"
-      label="Apellidos"
-      placeholder="Ingresa tus apellidos"
-      value={formulario.apellidos}
-      onChange={actualizarCampo}
-      required
-    />
-  </div>
+        <div className="col-12 col-md-6">
+          <CampoFormulario
+            name="apellidos"
+            label="Apellidos"
+            varianteLabel="form-label text-start d-block fw-semibold"
+            placeholder="Ingresa tus apellidos"
+            value={formulario.apellidos}
+            onChange={actualizarCampo}
+            required
+          />
+        </div>
 
-  <div className="col-12">
-    <CampoFormulario
-      name="correo"
-      label="Correo electrónico"
-      type="email"
-      placeholder="ejemplo@correo.com"
-      value={formulario.correo}
-      onChange={actualizarCampo}
-      required
-    />
-  </div>
+        <div className="col-12">
+          <CampoFormulario
+            name="correo"
+            label="Correo electrónico"
+            varianteLabel="form-label text-start d-block fw-semibold"
+            type="email"
+            placeholder="ejemplo@correo.com"
+            value={formulario.correo}
+            onChange={actualizarCampo}
+            required
+          />
+        </div>
 
-  <div className="col-12">
-    <CampoFormulario
-      name="mascota"
-      label="Nombre de la mascota"
-      placeholder="Ingresa el nombre de tu mascota"
-      value={formulario.mascota}
-      onChange={actualizarCampo}
-      required
-    />
-  </div>
+        <div className="col-12">
+          <CampoFormulario
+            name="mascota"
+            label="Nombre de la mascota"
+            varianteLabel="form-label text-start d-block fw-semibold"
+            placeholder="Ingresa el nombre de tu mascota"
+            value={formulario.mascota}
+            onChange={actualizarCampo}
+            required
+          />
+        </div>
 
         <div className="col-12 col-md-4">
-          <label htmlFor="especie" className="form-label">
-            Especie
-          </label>
+          <Label htmlFor="especie" varianteLabel="form-label text-start d-block fw-semibold" texto="Especie" />
           <select
             id="especie"
             name="especie"
@@ -179,9 +183,7 @@ function FormularioSolicitudCita({ servicio, onCancelar, onEnviar }) {
         </div>
 
         <div className="col-12 col-md-6">
-          <label htmlFor="fecha" className="form-label">
-            Fecha de la cita
-          </label>
+          <Label htmlFor="fecha" varianteLabel="form-label text-start d-block fw-semibold" texto="Fecha de la cita"/>
           <input
             id="fecha"
             name="fecha"
@@ -194,10 +196,8 @@ function FormularioSolicitudCita({ servicio, onCancelar, onEnviar }) {
           />
         </div>
 
-        <div className="col-12 col-md-6">
-          <label htmlFor="hora" className="form-label">
-            Hora preferida
-          </label>
+        <div className="col-12 col-md-6 my-3">
+          <Label htmlFor="hora" varianteLabel="form-label text-start d-block fw-semibold" texto="Ingresa la hora preferida"/>
           <select
             id="hora"
             name="hora"
@@ -218,9 +218,7 @@ function FormularioSolicitudCita({ servicio, onCancelar, onEnviar }) {
         </div>
 
         <div className="col-12">
-          <label htmlFor="motivo" className="form-label">
-            Motivo de la consulta
-          </label>
+          <Label htmlFor="motivo" varianteLabel="form-label text-start d-block fw-semibold" texto="Ingresa el motivo de la consulta"/>
           <textarea
             id="motivo"
             name="motivo"
@@ -234,17 +232,14 @@ function FormularioSolicitudCita({ servicio, onCancelar, onEnviar }) {
         </div>
 
         <div className="col-12 d-flex flex-wrap gap-2">
-          <button type="submit" className="btn btn-primary">
-            Enviar solicitud
-          </button>
+          <Boton texto="Enviar Solicitud"/>
 
-          <button
+          <Boton
             type="button"
-            className="btn btn-outline-secondary"
+            variante="outline-secondary"
+            texto="Cancelar"
             onClick={onCancelar}
-          >
-            Cancelar
-          </button>
+          />
         </div>
       </div>
     </form>

@@ -1,11 +1,8 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import Titulo from '../atoms/Titulo';
 import Parrafo from '../atoms/Parrafo';
 import Imagen from '../atoms/Imagen';
 
 function TarjetaMascota(props) {
-  const navigate = useNavigate();
 
   return (
     <div className="col-12 col-md-6 col-lg-3">

@@ -1,5 +1,4 @@
-//npm install react-icons
-//React icons instalado para este atomo
+//npm install react-icons para instalar los inconos
 import { FaUser } from "react-icons/fa";
 
 function Icono(props) {

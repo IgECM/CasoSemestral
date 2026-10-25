@@ -11,7 +11,7 @@ function Nosotros() {
 
   return (
     <PlantillaPublica>
-      <div className="fuente-kumbh py-4" style={{ backgroundColor: '#DEDEDE' }}>
+      <main className="fuente-kumbh py-4" style={{ backgroundColor: '#DEDEDE' }}>
 
         <section className="container py-5 border-bottom border-black">
           <div className="row align-items-center mb-5">
@@ -38,9 +38,9 @@ function Nosotros() {
         </section>
 
 
-        <section className="rounded-4 p-5 text-center mt-5 shadow-sm mb-5">
-          <Titulo nivel={2} texto="Conoce a Nuestro Equipo" className="mb-5 text-dark fw-bold fuente-kumbh" />
-          <div className="mb-5">
+        <section className="rounded-4 p-5 text-center mt-5">
+          <Titulo nivel={2} texto="Conoce a Nuestro Equipo" className="mb-5 text-dark fw-bold fuente-kumbh" style={{fontSize: '30px'}} />
+          <div className="mb-4">
             <Imagen
               src="/img/Trabajadores grupal.jpg"
               alt="Equipo de trabajo de Veterinaria San Marcos"
@@ -67,7 +67,7 @@ function Nosotros() {
           </div>
         </section>
 
-      </div>
+      </main>
     </PlantillaPublica>
   );
 }

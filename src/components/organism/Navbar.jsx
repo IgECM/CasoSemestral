@@ -1,4 +1,3 @@
-import React from 'react';
 import Icono from '../atoms/Icono';
 
 function Navbar(props) {

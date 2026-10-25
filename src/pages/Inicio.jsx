@@ -1,4 +1,3 @@
-import React from 'react';
 import PlantillaPublica from '../components/templates/PlantillaPublica';
 import Titulo from '../components/atoms/Titulo';
 import Parrafo from '../components/atoms/Parrafo';

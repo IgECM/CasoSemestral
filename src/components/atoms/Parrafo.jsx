@@ -1,5 +1,3 @@
-import React from 'react';
-
 function Parrafo(props) {
   return (
     <p className={props.className}>
