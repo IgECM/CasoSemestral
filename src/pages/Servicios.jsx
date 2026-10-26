@@ -3,9 +3,13 @@ import PlantillaPublica from "../components/templates/PlantillaPublica";
 import ListaCategorias from "../components/organism/ListaCategorias";
 import Titulo from "../components/atoms/Titulo";
 import Parrafo from "../components/atoms/Parrafo";
+import { useTituloPagina } from '../hooks/useTituloPagina';
 import "../App.css";
 
 function Servicios() {
+  
+  useTituloPagina('Servicios')
+
   return (
     <PlantillaPublica>
       <main className="fuente-kumbh pb-4" style={{ backgroundColor: '#DEDEDE' }}>

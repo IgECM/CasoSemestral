@@ -5,7 +5,6 @@ import InicioSesion from "./pages/InicioSesion";
 import Servicios from "./pages/Servicios";
 import NoEncontrada from './pages/NoEncontrada';
 import SolicitarCita from './pages/SolicitarCita'
-import CitaConf from './pages/CitaConfirmada'
 import MisCitas from './pages/MisCitas'
 import Nosotros from './pages/Nosotros'
 
@@ -24,8 +23,6 @@ function App() {
         <Route path="/servicios" element={<Servicios />} />
 
         <Route path="/solicitar-cita" element={<SolicitarCita />} />
-
-        <Route path="/confirm" element={<CitaConf />} />
 
         <Route path="/miscitas" element={<MisCitas />} />
 

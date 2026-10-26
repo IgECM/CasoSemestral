@@ -1,4 +1,4 @@
-import { serviciosIniciales } from "../data/serviciosData";
+import { serviciosIniciales } from "../data/servicios";
 
 export function obtenerServicios() {
   let datosGuardados = localStorage.getItem("servicios");

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { citasIniciales } from "../data/citas";
 import PlantillaPublica from "../components/templates/PlantillaPublica";
 import Boton from "../components/atoms/Boton";
+import { useTituloPagina } from '../hooks/useTituloPagina';
 
 function MisCitas() {
   const [citas, setCitas] = useState(() => {
@@ -13,6 +14,8 @@ function MisCitas() {
   });
 
   const [filtro, setFiltro] = useState("Todas");
+
+  useTituloPagina("Mis Citas")
 
   function cancelarCita(id) {
     const confirmar = window.confirm(

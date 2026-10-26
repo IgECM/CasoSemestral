@@ -9,7 +9,8 @@
     "lint": "oxlint",
     "preview": "vite preview",
     "test": "vitest",
-    "test:run": "vitest run"
+    "test:run": "vitest run",
+    "test:informe": "vitest run --coverage"
   },
   "dependencies": {
     "bootstrap": "^5.3.8",

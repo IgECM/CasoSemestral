@@ -4,9 +4,12 @@ import ListaServicios from "../components/organism/ListaServicios";
 import FormularioSolicitudCita from "../components/organism/FormularioSolicitudCita";
 import PlantillaPublica from "../components/templates/PlantillaPublica";
 import Titulo from "../components/atoms/Titulo";
+import { useTituloPagina } from '../hooks/useTituloPagina';
 
 function SolicitarCita() {
   const [servicioSeleccionado, setServicioSeleccionado] = useState(null);
+
+  useTituloPagina('Solicitar Cita')
 
   const guardarCita = (nuevaCita) => {
     console.log("Solicitud de cita:", nuevaCita);

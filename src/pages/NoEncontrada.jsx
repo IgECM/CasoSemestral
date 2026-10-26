@@ -1,11 +1,13 @@
 import { useNavigate } from 'react-router-dom';
 import Boton from '../components/atoms/Boton';
 import PlantillaPublica from '../components/templates/PlantillaPublica';
+import { useTituloPagina } from '../hooks/useTituloPagina';
 
 function NoEncontrada(props) {
   const navigate = useNavigate();
+  useTituloPagina("Página No Encontrada")
 
-  return (//style={{ color: 'black'}}
+  return (
     <PlantillaPublica>
       <div className="contenedor-no-encontrada login-container">
         <h1 className="titulo-h1">
