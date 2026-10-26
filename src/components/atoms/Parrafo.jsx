@@ -1,6 +1,6 @@
 function Parrafo(props) {
   return (
-    <p className={props.className}>
+    <p className={props.className} style={props.style}>
       {props.texto}
     </p>
   );

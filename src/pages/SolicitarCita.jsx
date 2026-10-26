@@ -1,55 +1,40 @@
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import ListaServicios from "../components/organism/ListaServicios";
 import FormularioSolicitudCita from "../components/organism/FormularioSolicitudCita";
 import PlantillaPublica from "../components/templates/PlantillaPublica";
+import Titulo from "../components/atoms/Titulo";
 
 function SolicitarCita() {
-  const [mostrarFormulario, setMostrarFormulario] = useState(false);
-
-  const servicio = {
-    nombre: "Consulta veterinaria general",
-    descripcion:
-      "Evaluación general de salud para perros y gatos.",
-    precio: 20000,
-  };
+  const [servicioSeleccionado, setServicioSeleccionado] = useState(null);
 
   const guardarCita = (nuevaCita) => {
     console.log("Solicitud de cita:", nuevaCita);
-
   };
 
   return (
     <PlantillaPublica>
-      <Container className="py-4">
-        <Row className="justify-content-center">
-          <Col xs={12} md={10} lg={8}>
-            {!mostrarFormulario ? (
-              <div className="card shadow-sm p-4">
-                <h2 style={{color: 'black'}}>{servicio.nombre}</h2>
+      <Container className="py-5 mb-5">
+        
+        <Titulo nivel={1} className="text-dark text-align-center pb-3" texto="Selecciona un servicio"/>
 
-                <p>{servicio.descripcion}</p>
+        {!servicioSeleccionado ? (
+  
+          <ListaServicios onSeleccionar={setServicioSeleccionado} />
+        ) : (
+  
+          <Row className="justify-content-center">
+            <Col xs={12} md={10} lg={8}>
 
-                <p>
-                  <strong>Precio:</strong>{" "}
-                  ${servicio.precio.toLocaleString("es-CL")} CLP
-                </p>
-
-                <button
-                  className="btn btn-primary"
-                  onClick={() => setMostrarFormulario(true)}
-                >
-                  Solicitar cita
-                </button>
-              </div>
-            ) : (
               <FormularioSolicitudCita
-                servicio={servicio}
+                servicio={servicioSeleccionado}
                 onEnviar={guardarCita}
-                onCancelar={() => setMostrarFormulario(false)}
+                onCancelar={() => setServicioSeleccionado(null)}
               />
-            )}
-          </Col>
-        </Row>
+            </Col>
+          </Row>
+        )}
+
       </Container>
     </PlantillaPublica>
   );
